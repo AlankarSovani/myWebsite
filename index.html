@@ -1,3 +1,47 @@
-<h1>
-    hey this is alankar what is up guys contact me at -------
-</h1>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Title>Alankar Sovani</Title>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body{
+            text-align: center;
+        }
+        h1{
+            /* color: black; */
+        }
+        p, h1, h2, td {
+            font-family: Rubik, sans-serif;
+        }
+    </style>
+    <body>
+        <h1>Hi I'm Alankar</h1>
+        <p>My <a href="https://beta.cy2.me/">friend</a> and I developed a discord bot called EggBot. Add it to your server by clicking  
+            <a href="https://discord.com/api/oauth2/authorize?client_id=789238904338382898&permissions=8&scope=bot">here</a>.
+        </p>
+        <p onclick="on_egg_click()"><img src="egg.jpg" alt="insert picture of egg here"></p>
+        <p id="numClickIndicator"></p>
+    </body>
+    <script>
+        var numClicks = 0
+        var surprise = 0;
+        var isPrestiged = false;
+        function on_egg_click(){
+            numClicks++;
+            var numClickIndicator = document.getElementById("numClickIndicator");
+            if(isPrestiged){
+                numClickIndicator.innerHTML = numClicks + "/2147483647 clicks prestige once more. Prestige level: " + surprise + ". Reach Prestige level 2147483647 to unlock Obama's DNS.";
+            }
+            else{
+                numClickIndicator.innerHTML = numClicks + "/2147483647 clicks to crack the egg.";
+            }
+            if(numClicks == 2147483647){
+                numClicks = -2147483648;
+                surprise += 1;
+                numClickIndicator.innerHTML += "Prestige level: " + surprise + "."
+                isPrestiged = true;
+            }
+        }
+    </script>
+</html>
